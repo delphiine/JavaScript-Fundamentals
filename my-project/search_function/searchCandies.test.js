@@ -5,7 +5,7 @@ describe('Candies search', () => {
       expect(candies.length).toBe(13)
     });
 
-    it('returns names of candies that starts with specific letters and cost less then a predifined number', () => {
+    it('returns names of candies that starts with specific letters and cost less than a predefined number', () => {
       expect(searchCandies('Ma', 10)).toEqual(['Mars', 'Maltesers'])
       expect(searchCandies('Ma', 2)).toEqual([ 'Mars' ])
       expect(searchCandies('S', 10)).toEqual([ 'Skitties', 'Skittles', 'Starburst' ])
