@@ -14,13 +14,11 @@ const candies = [
     { name: 'Fraise Tagada', price: 5.99 }
   ];
   
-  const searchCandies = (startingStr,maxPrice) =>{
-        const selectedCandies = candies.filter((item) => {
-         return item.price < maxPrice && item.name.startsWith(startingStr)
+  const searchCandies = (startingStr, maxPrice) =>{
+    const selectedCandies = candies.filter((item) => {
+      return item.price < maxPrice && item.name.toLowerCase().startsWith(startingStr.toLowerCase())
     });
     return selectedCandies.map(item => item.name);
-    console.log(selectedCandies);
-  
   }
   
   module.exports = {candies, searchCandies};
