@@ -6,14 +6,14 @@ describe('Thermostat', () => {
         expect(thermostat.getTemperature()).toEqual(20);
     });
 
-    it('returns the a temperature of 22 degrees if increased twice', () => {
+    it('returns a temperature of 22 degrees if increased twice', () => {
         const thermostat = new Thermostat();
         thermostat.up();
         thermostat.up();
         expect(thermostat.getTemperature()).toEqual(22);
     });
 
-    it('returns the a temperature of 21 degrees if decreased once', () => {
+    it('returns a temperature of 21 degrees if decreased once', () => {
         const thermostat = new Thermostat();
         thermostat.up();
         thermostat.up();
@@ -42,7 +42,7 @@ describe('Thermostat', () => {
         expect(thermostat.getTemperature()).toEqual(10);
     });
 
-    it("returns the a temperature of '26' if increased while the power saving mode is off", () => {
+    it("returns a temperature of '26' if increased while the power saving mode is off", () => {
         const thermostat = new Thermostat();
         thermostat.setPowerSavingMode();
         for (let i = 0 ; i < 6 ; i++) {
