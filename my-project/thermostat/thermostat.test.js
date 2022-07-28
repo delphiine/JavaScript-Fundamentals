@@ -34,6 +34,14 @@ describe('Thermostat', () => {
         expect(thermostat.getTemperature()).toEqual(25);
     });
 
+    it("doesn't allow the temperature to be decreased beyond the minimum temperature '10'", () => {
+        const thermostat = new Thermostat();
+        for (let i = 20; i > 0 ; i--) {
+            thermostat.down();
+        }
+        expect(thermostat.getTemperature()).toEqual(10);
+    });
+
     it("returns the a temperature of '26' if increased while the power saving mode is off", () => {
         const thermostat = new Thermostat();
         thermostat.setPowerSavingMode();
